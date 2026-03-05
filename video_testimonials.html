@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Testimonials | Asad Manzoor</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR (Loaded dynamically)
+       ============================================================ -->
+  <div id="navbar-container"></div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main>
+    <!-- --------------------------------------------------------
+         VIDEO TESTIMONIALS PAGE
+         -------------------------------------------------------- -->
+    <section class="video-testimonials-page" id="video-testimonials">
+      <div class="testimonial-container">
+        <div class="section-label">VIDEO TESTIMONIALS</div>
+        <h2>Watch Our <span class="highlight">Client Success Stories</span></h2>
+        <p class="videos-description">Real clients sharing their experiences and results working with us</p>
+        
+        <div class="video-grid-full">
+          <!-- Video 1 -->
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Client Testimonial 1" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <div class="client-avatar">
+                <img src="https://i.pravatar.cc/100?img=15" alt="Client" />
+              </div>
+              <h3>Fatima Ahmed</h3>
+              <p class="client-role">E-Commerce Business Owner</p>
+              <p class="client-testimonial">"Asad transformed my online store completely. The design is stunning and sales increased by 250% within 3 months!"</p>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Client Testimonial 2" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <div class="client-avatar">
+                <img src="https://i.pravatar.cc/100?img=16" alt="Client" />
+              </div>
+              <h3>Ali Hassan</h3>
+              <p class="client-role">SaaS Founder</p>
+              <p class="client-testimonial">"The Webflow development was flawless. Asad delivered exactly what we needed with incredible attention to detail."</p>
+            </div>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Client Testimonial 3" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <div class="client-avatar">
+                <img src="https://i.pravatar.cc/100?img=17" alt="Client" />
+              </div>
+              <h3>Zara Khan</h3>
+              <p class="client-role">Digital Marketing Agency</p>
+              <p class="client-testimonial">"Professional, reliable, and incredibly talented. Asad is my go-to designer for all major projects now."</p>
+            </div>
+          </div>
+
+          <!-- Video 4 -->
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Client Testimonial 4" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <div class="client-avatar">
+                <img src="https://i.pravatar.cc/100?img=18" alt="Client" />
+              </div>
+              <h3>Mohammed Ali</h3>
+              <p class="client-role">Startup Founder</p>
+              <p class="client-testimonial">"Asad understood our vision perfectly. The website exceeds all expectations and has helped us secure funding!"</p>
+            </div>
+          </div>
+
+          <!-- Video 5 -->
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Client Testimonial 5" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <div class="client-avatar">
+                <img src="https://i.pravatar.cc/100?img=19" alt="Client" />
+              </div>
+              <h3>Sarah Johnson</h3>
+              <p class="client-role">Fashion Brand Owner</p>
+              <p class="client-testimonial">"The e-commerce platform is user-friendly and beautiful. My conversion rate doubled in the first month!"</p>
+            </div>
+          </div>
+
+          <!-- Video 6 -->
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Client Testimonial 6" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <div class="client-avatar">
+                <img src="https://i.pravatar.cc/100?img=20" alt="Client" />
+              </div>
+              <h3>Ahmed Khan</h3>
+              <p class="client-role">Tech Company CEO</p>
+              <p class="client-testimonial">"Working with Asad was seamless from start to finish. His technical expertise combined with design sense is unmatched."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-cta">
+          <p>Ready to share your success story?</p>
+          <a href="index.html#workshop" class="ws-button">BOOK YOUR PROJECT NOW →</a>
+          <a href="index.html" class="nav-link" style="display: inline-block; margin-top: 15px; font-size: 14px; text-decoration: underline; color: #BCEF12;">← Back to Home</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER (Loaded dynamically)
+       ============================================================ -->
+  <div id="footer-container"></div>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script>
+    // Load navbar and footer from external HTML files
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load navbar
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+          initNavigation();
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        });
+    });
+
+    function toggleMenu() {
+      const nav = document.getElementById("nav");
+      if(nav) nav.classList.toggle("active");
+    }
+  </script>
+  <script src="js/navigation.js"></script>
+
+</body>
+</html>
