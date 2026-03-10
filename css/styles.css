@@ -313,6 +313,7 @@ nav.active a {
     background-color: rgba(188, 239, 18, 0.08);
     font-size: 13px;
     width: 100%;
+    text-align: center;
   }
 
   .dropdown-item:last-child {
@@ -1663,7 +1664,7 @@ footer {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 15px 0;
     display: none;
     z-index: 999;
@@ -1685,6 +1686,7 @@ footer {
     border-left: 3px solid transparent;
     transition: all 0.3s ease;
     color: #e0e0e0;
+    text-align: center;
   }
 
   nav a:hover {
@@ -1807,25 +1809,25 @@ footer {
   }
 
   .my-video iframe {
-    width: 100%;
-    max-width: 100%;
+    width: 95vw;
+    max-width: 95vw;
   }
 
   /* --- Workshop Section --- */
   .workshop-section {
-    padding: 30px 15px 50px 15px;
+    padding: 25px 15px 40px 15px;
   }
 
   .ws-headline {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.3;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .ws-button {
-    padding: 14px 30px;
-    font-size: 12px;
-    margin-bottom: 15px;
+    padding: 12px 25px;
+    font-size: 11px;
+    margin-bottom: 12px;
   }
 
   /* --- About Section --- */
@@ -1870,7 +1872,7 @@ footer {
   }
 
   .about-cta {
-    align-self: flex-start !important;
+    align-self: center;
     padding: 10px 20px !important;
     font-size: 10px !important;
   }
@@ -1997,7 +1999,7 @@ footer {
   }
 
   .partners-logos {
-    gap: 20px;
+    gap: 25px;
   }
   
   .partner-logo {
