@@ -270,6 +270,10 @@ nav.active a {
   padding-left: 4px;
 }
 
+.mobile-social{
+    display: none;
+  }
+
 /* Mobile dropdown styles */
 @media (max-width: 768px) {
   .dropdown {
@@ -328,6 +332,23 @@ nav.active a {
   .dropdown-item:hover {
     background-color: rgba(188, 239, 18, 0.1);
     color: #BCEF12 !important;
+  }
+
+  /* social icons row inside mobile nav */
+  
+
+  @media (max-width: 768px) {
+    .mobile-social {
+      display: flex;
+    }
+  }
+  .mobile-social a {
+    color: #e0e0e0;
+    font-size: 20px;
+    transition: color 0.2s;
+  }
+  .mobile-social a:hover {
+    color: #BCEF12;
   }
 }
 
@@ -1022,7 +1043,7 @@ nav.active a {
 }
 .brand-icon {
   width: 100px; /* Adjust size of Figma icon */
-  height: 100px;
+  height: auto;
   object-fit: contain; /* Ensure the image does not stretch */
   margin: 0 auto;
 }
@@ -2567,6 +2588,30 @@ footer {
     margin-bottom: 25px;
   }
 
+  /* --- Trusted partners mobile tweaks --- */
+  .trusted-partners {
+    padding: 30px 12px;
+  }
+  .trusted-partners h2 {
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .partners-logos {
+    justify-content: center;
+    gap: 15px;
+  }
+  .partner-logo {
+    width: 70px;
+    height: 70px;
+    margin: 8px;
+  }
+  .partner-logo .brand-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
   .process-step {
     padding: 20px 15px;
   }
@@ -2578,7 +2623,8 @@ footer {
   .process-content p {
     font-size: 12px;
   }
-}
+
+
 
 /* ============================================================
    7.5 PORTFOLIO BANNER SECTION
@@ -2755,6 +2801,12 @@ footer {
     align-self: stretch;
     justify-content: center;
   }
+  .partner-logo {
+    height: 20px;
+  }
+  .partner-container h3{
+    margin-bottom: 30px;
+  }
 }
 
 /* Small Mobile (under 480px) */
@@ -2820,3 +2872,5 @@ footer {
   opacity: 1;
   visibility: visible;
 }
+
+
