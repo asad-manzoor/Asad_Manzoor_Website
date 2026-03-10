@@ -2845,7 +2845,7 @@ footer {
    ============================================================ */
 .scroll-to-top {
   position: fixed;
-  bottom: 30px;
+  bottom: 90px;
   right: 30px;
   width: 50px;
   height: 50px;
@@ -2871,6 +2871,76 @@ footer {
 .scroll-to-top.show {
   opacity: 1;
   visibility: visible;
+}
+
+/* ============================================================
+   18. WHATSAPP BUTTON
+   ============================================================ */
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 85px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .whatsapp-btn {
+    bottom: 30px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-to-top {
+    bottom: 80px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .whatsapp-btn {
+    bottom: 25px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
 }
 
 
