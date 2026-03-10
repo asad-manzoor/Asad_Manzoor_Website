@@ -2,10 +2,11 @@
 function initNavigation() {
   const links = document.querySelectorAll(".nav-link");
   const nav = document.getElementById("nav");
-  
+
   if (!links.length || !nav) return;
 
   setActiveNavLink();
+  initDropdown(); // Initialize dropdown functionality
 
   // Add click listeners to all links
   links.forEach(link => {
@@ -25,6 +26,21 @@ function initNavigation() {
   }
 }
 
+// --- Dropdown Functionality ---
+function initDropdown() {
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
+  const nav = document.getElementById("nav");
+
+  if (!dropdownItems.length) return;
+
+  // Close dropdown when clicking on an item
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', function() {
+      if (nav) nav.classList.remove("active");
+    });
+  });
+}
+
 function setActiveNavLink() {
   const links = document.querySelectorAll(".nav-link");
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -39,6 +55,7 @@ function setActiveNavLink() {
       { id: 'about', link: 'index.html#about' },
       { id: 'speciality', link: 'index.html#speciality' },
       { id: 'testimonials', link: 'index.html#testimonials' },
+      { id: 'faq', link: 'index.html#faq' },
       { id: 'video-testimonials', link: 'video_testimonials.html' },
       { id: 'workshop', link: 'index.html#workshop' }
     ];
