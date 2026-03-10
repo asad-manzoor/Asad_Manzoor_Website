@@ -275,11 +275,16 @@ nav.active a {
   .dropdown {
     width: 100%;
     margin: 0;
+    display: block;
   }
 
   .dropdown-toggle {
     width: 100%;
     padding: 12px 16px;
+    text-align: center;
+    border-left: 3px solid transparent;
+    color: #e0e0e0;
+    display: block;
   }
 
   .dropdown-menu {
@@ -308,12 +313,12 @@ nav.active a {
 
   .dropdown-item {
     padding: 12px 16px;
-    padding-left: 35px;
     border-bottom: 1px solid rgba(188, 239, 18, 0.12);
-    background-color: rgba(188, 239, 18, 0.08);
+    background-color: transparent;
     font-size: 13px;
     width: 100%;
     text-align: center;
+    color: #e0e0e0 !important;
   }
 
   .dropdown-item:last-child {
@@ -321,8 +326,8 @@ nav.active a {
   }
 
   .dropdown-item:hover {
-    background-color: rgba(188, 239, 18, 0.16);
-    padding-left: 40px;
+    background-color: rgba(188, 239, 18, 0.1);
+    color: #BCEF12 !important;
   }
 }
 
@@ -1051,6 +1056,7 @@ nav.active a {
   gap: 50px;
   align-items: center;
   backdrop-filter: blur(10px);
+  grid-auto-flow: row;
 }
 
 /* --- Content --- */
@@ -1818,10 +1824,38 @@ footer {
     padding: 25px 15px 40px 15px;
   }
 
+  .ws-badge {
+    padding: 6px 14px;
+    font-size: 12px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 100%;
+  }
+
+  /* mobile: simplify badge text */
+  @media (max-width: 480px) {
+    .ws-badge {
+      padding: 5px 10px;
+      justify-content: center;
+    }
+    .ws-badge span {
+      font-size: 0; /* hide text except strong */
+    }
+    .ws-badge span strong {
+      font-size: 12px;
+    }
+  }
+
+  .ws-check-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+
   .ws-headline {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.3;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .ws-button {
@@ -1836,49 +1870,128 @@ footer {
   }
 
   .about-box {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 35px 20px;
-    border-radius: 16px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 110px;
+    grid-template-rows: auto auto auto;
+    gap: 0;
+    padding: 25px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(188, 239, 18, 0.2);
+  }
+
+  .about-image {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    flex-shrink: 0;
+    z-index: 10;
+  }
+
+  .profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid #BCEF12;
+    box-shadow: 0 0 30px rgba(188, 239, 18, 0.6), inset 0 0 30px rgba(188, 239, 18, 0.3);
+    object-fit: cover;
+  }
+
+  @media (max-width: 480px) {
+    .about-image {
+      top: 10px;
+      right: 10px;
+    }
+    .profile-img {
+      width: 70px;
+      height: 70px;
+      border-width: 3px;
+    }
+  }
+
+  .about-content {
+    text-align: left;
+    grid-column: 1;
+    grid-row: 1 / 4;
+    padding-right: 0;
+  }
+
+  .about-content .section-label {
+    font-size: 11px;
+    margin-bottom: 12px;
+    padding: 5px 10px;
+    background-color: #263004;
+    border-radius: 20px;
+    width: fit-content;
   }
 
   .about-content h2 {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.2;
+    margin-bottom: 14px;
+    font-weight: 800;
   }
 
   .about-description {
     font-size: 13px;
     margin-bottom: 20px;
+    line-height: 1.5;
   }
 
   .about-stats {
-    gap: 25px;
-    padding-bottom: 18px;
-    margin-bottom: 18px;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .stat-item {
+    text-align: center;
+    min-width: 90px;
+    padding: 12px 10px;
+    border: 1px solid rgba(188, 239, 18, 0.25);
+    border-radius: 12px;
+    background: rgba(188, 239, 18, 0.05);
   }
 
   .stat-number {
-    font-size: 26px;
+    font-size: 20px;
+    font-weight: 800;
   }
 
   .stat-label {
-    font-size: 10px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   .about-text {
     font-size: 13px;
-    margin-bottom: 18px;
+    margin-bottom: 0;
   }
 
   .about-cta {
-    align-self: center;
-    padding: 10px 20px !important;
-    font-size: 10px !important;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    align-self: unset;
+    padding: 12px 22px !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    width: fit-content;
+    margin-top: 0;
   }
 
-  .profile-img {
-    max-width: 220px;
+  /* hide button on smaller screens */
+  @media (max-width: 480px) {
+    .about-cta {
+      display: none;
+    }
   }
 
   /* --- Specialities Section --- */
