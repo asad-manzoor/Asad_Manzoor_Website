@@ -751,10 +751,14 @@ nav.active a {
   border-radius: 20px;
   padding: 20px;
   /* each card = (100% - total gaps) / visible count */
-  width:350px;
+  width: 350px;
+  /* min-height: 420px; */
   flex-shrink: 0;
   text-align: left;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* --- Arrow Buttons --- */
@@ -864,6 +868,23 @@ nav.active a {
 .user-title {
   font-size: 12px;
   color: #777;
+}
+
+.user-country {
+  font-size: 10px;
+  color: #ddd;
+  margin-top: 4px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.country-flag {
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+  object-fit: cover;
 }
 
 .linkedin-icon {
