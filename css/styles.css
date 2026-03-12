@@ -1355,6 +1355,28 @@ nav.active a {
   margin-bottom: 20px;
 }
 
+.banner-buttons{
+  display:flex;
+  gap:15px;
+}
+
+.banner-button{
+  padding:12px 22px;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
+}
+
+.banner-button.primary{
+  background:#BCEF12;
+  color:#000;
+}
+
+.banner-button.secondary{
+  border:2px solid #ffffff;
+  background:#ffffff;
+  color:#000;
+}
 
 /* ============================================================
    8. FOOTER
